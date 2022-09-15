@@ -14,7 +14,7 @@ template <class T> class Queue{
 
         int add=-1;
         int remove=-1;
-        int addtoQ(T x){
+        int Enqueue(T x){
 
                 if(!isFull()){
                     
@@ -28,7 +28,7 @@ template <class T> class Queue{
                 
         }
 
-        int removetoQ(){
+        int Dequeue(){
             if(!isEmpty()){
                 remove++;
                 return 0;
@@ -70,9 +70,9 @@ template <class T> class Queue{
 };
 int main(){
     Queue <int> obj;
-    obj.addtoQ(10);
-    obj.addtoQ(20);
-    obj.removetoQ();
+    obj.Enqueue(10);
+    obj.Enqueue(20);
+    obj.Dequeue();
     cout<<obj.topEl();
     return 0;
 }
